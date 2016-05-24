@@ -1,0 +1,5 @@
+var config = {}
+
+config.token = "EAALdpbnEnqMBACABVlvoWPkB6fAROeFOZC1UWnzuLD6JzFfTSUxEo9zagEdwqot0zI4dZBFJYLHSPVNwgF3xHCLJWF8Fa404wcCZBmMHNfivTHiwdCf9scIKW0ZCMXe4XZBUZBfBANkluZBdsM4pjSv1v6nuaYOvONhFfRgiBXI2AZDZD"
+
+module.exports = config;

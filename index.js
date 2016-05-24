@@ -4,6 +4,8 @@ var request = require('request')
 var app = express()
 var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('countries.json', 'utf8'));
+var config = require("./config")
+
 app.set('port', (process.env.PORT || 5000))
 
 // Process application/x-www-form-urlencoded
@@ -45,7 +47,7 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200)
 })
 
-var token = "EAALdpbnEnqMBACABVlvoWPkB6fAROeFOZC1UWnzuLD6JzFfTSUxEo9zagEdwqot0zI4dZBFJYLHSPVNwgF3xHCLJWF8Fa404wcCZBmMHNfivTHiwdCf9scIKW0ZCMXe4XZBUZBfBANkluZBdsM4pjSv1v6nuaYOvONhFfRgiBXI2AZDZD"
+var token = config.token;
 
 function sendTextMessage(sender, text) {
     messageData = {
