@@ -2,7 +2,8 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-
+var fs = require('fs');
+var obj = JSON.parse(fs.readFileSync('countries.json', 'utf8'));
 app.set('port', (process.env.PORT || 5000))
 
 // Process application/x-www-form-urlencoded
@@ -36,7 +37,9 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+            var random = Math.floor(Math.random() * obj.length)
+            var message = obj[random].name.common + "\n" + obj[random].currency + "\n" + obj[random].capital + "\n" + obj[random].region;
+            sendTextMessage(sender, "Text received, echo: " + message);
         }
     }
     res.sendStatus(200)
