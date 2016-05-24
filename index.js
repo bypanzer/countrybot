@@ -38,8 +38,8 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
             var random = Math.floor(Math.random() * obj.length)
-            var message = obj[random].name.common + "\n" + obj[random].currency + "\n" + obj[random].capital + "\n" + obj[random].region;
-            sendTextMessage(sender, "Text received, echo: " + message);
+            var message = "Country: " + obj[random].name.common + "\n Currency: " + obj[random].currency + "\n Capital: " + obj[random].capital + "\n Region :" + obj[random].region;
+            sendTextMessage(sender, message);
         }
     }
     res.sendStatus(200)
