@@ -1,0 +1,20 @@
+{
+  "name": "facebot",
+  "version": "1.0.0",
+  "description": "get facebook bots work for you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://giithub.com/hackerkid/facebot"
+  },
+  "author": "Vishnu Ks",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "request": "^2.72.0"
+  }
+}
