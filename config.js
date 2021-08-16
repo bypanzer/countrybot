@@ -1,5 +1,5 @@
 var config = {}
 
-config.token = "EAALdpbnEnqMBACABVlvoWPkB6fAROeFOZC1UWnzuLD6JzFfTSUxEo9zagEdwqot0zI4dZBFJYLHSPVNwgF3xHCLJWF8Fa404wcCZBmMHNfivTHiwdCf9scIKW0ZCMXe4XZBUZBfBANkluZBdsM4pjSv1v6nuaYOvONhFfRgiBXI2AZDZD"
+config.token = "1998209048:AAH_hGmeWZ7XZq76mbnX-CHRk7zRL3YhS6M"
 
 module.exports = config;
